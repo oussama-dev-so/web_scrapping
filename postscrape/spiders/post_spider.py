@@ -15,7 +15,7 @@ class PostSpider(scrapy.Spider):
         articles_text=[]
         articles_date=[]
         articles_url=[]
-        client = MongoClient("mongodb+srv://oussama_db:92C3jDz3Mt3tKPx@cluster0.sml01.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+        client = MongoClient("mongodb+srv://<username>:<password>@cluster0.sml01.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
         db_articles=client["db_articles"]
         collection_articles = db_articles["collection_articles"]
         for article in response.css('div.nw-c-top-stories'): # get top div
